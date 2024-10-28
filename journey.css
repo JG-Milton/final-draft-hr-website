@@ -1,0 +1,474 @@
+/* DEFAUlT SETTINGS, DO NOT TOUCH!! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body:not(nav) {
+       display: flex;
+       flex-direction: column;
+       gap: 0.6em;
+       box-shadow: 3px 3px 3px darkslategrey;
+       background-image: url(image/wallpaper-new.jpeg);
+       background-color: whitesmoke;
+       background-position: center;
+       background-size: contain;
+  }
+  
+  body {
+    min-height: 100vh;
+    min-width: 100vw;
+    
+    /* background-color: #333; */
+  }
+  
+  /* NAVIGATION BAR, REUSE FOR ALL NECESSARY PAGES */
+  
+  
+  nav {
+    background-color: darkred;
+    box-shadow: 3px 3px 5px slategray;
+  }
+  
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    height: 50px;
+  }
+  
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  nav a:hover{
+    background-color: salmon;
+  }
+  
+  nav li:first-child {
+    margin-right: auto;
+  }
+  
+  .logo {
+    max-height: 50px; /* Adjust this value based on your navbar height */
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 99;
+    background-color: rgb(208, 208, 208, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px lightgray;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .sidebar a {
+    width: 100%;
+  }
+  
+  @media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block !important;
+
+  }
+}
+  
+  @media(max-width: 400px) {
+    .sidebar{
+        width: 100%;
+    }
+  }
+  
+  .menu-button{
+    display: none;
+  }
+/* SECTION 1 */
+
+.title {
+  /* border: solid 2px; */
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.title h1 {
+  font-size: 4em;
+  padding: 5px 15px 15px 15px;
+  color: #da7878;
+  text-shadow: 2px 2px 5px black;
+  font-family: "Signika", sans-serif;
+  letter-spacing: 4px;
+  /* font-weight: 400; */
+  font-style: normal;
+  
+}
+
+.title p {
+  color: rgb(117, 25, 25);
+  font-size: 1.4em;
+  /* text-shadow: 2px 2px 5px black; */
+  padding: 0px 60px;
+  font-style: italic;
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ border-radius: 25px;
+ margin-right: 20px;
+ border: solid 1px;
+ padding: 20px 20px;
+}
+
+
+/* ------------SECTION 2---------- */
+
+.career-wrapper {
+  height: 120vh;
+  max-width: 100vw;
+  /* border: solid 2px; */
+  display: flex;
+  overflow-x: hidden;
+  
+}
+
+.career-1 {
+  /* border: solid 2px; */
+  height: 100vh;
+  width: 50vw;
+  background-image: url(image/yourcareer.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;  
+}
+
+
+/* ================ RIGHT SIDE OF PAGE ==================== */
+
+.container h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-family: 'bungee inline';
+  text-shadow: 
+    1px 1px 0 white, 
+   -1px 1px 0 white, 
+    1px -1px 0 white, 
+   -1px -1px 0 white;
+   font-size: 3em;
+  
+}
+
+.container {
+  height: max-content;
+}
+
+.container:not(.mySlides) {
+  position: relative;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.image-staff {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border: solid 2px blue; */
+  height: 50vh;
+  background-color: transparent;
+  
+}
+
+.shanker {
+  background-image: url(image/shanker.png);
+}
+
+.jess {
+  background-image: url(image/jess.png);
+}
+
+.adrian {
+  background-image: url(image/adrian.png);
+}
+
+.shobhakar {
+  background-image: url(image/staff\ outlet.png);
+}
+
+.aida {
+  background-image: url(image/aida.png);
+}
+
+.afiq {
+  background-image: url(image/Afiq\ \(new\).png);
+}
+
+.testimonial p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px 30px;
+  border: solid 2px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: white;
+  height: auto;
+}
+
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  /* user-select: none; */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  /* border: solid 2px; */
+}
+
+.mySlides img {
+  object-fit: contain;
+  /* border: solid 2px; */
+  height: 100%;
+  width: 50vw;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: darkslategray;
+  padding: 2px 16px;
+  color: white;
+  /* border: solid 2px blue; */
+}
+
+.row {
+  box-shadow: 0px 0px 15px black;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.3%;
+  align-content: center;
+  align-items: center;
+  /* border: solid 2px red; */
+}
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.caption-container {
+  font-size: 1.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 978px) {
+  .career-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .career-1 {
+    height: 100vh;
+    width: 100vw;
+    width: auto;
+  }
+  .container {
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1{
+    font-size: 2em;
+    text-wrap: wrap;
+  }
+
+  .container h1 {
+    font-size: 2em;
+  }
+}
+
+
+/* ====================ICONS ========================== */
+
+.icons {
+  border: solid 2px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+  color: white;
+}
+
+.icons p {
+  font-size: 1.3em;
+  padding-right: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.icons p:hover ~ a {
+  animation: wobble 0.5s infinite alternate ease;
+}
+
+.fa-brands:hover {
+  animation: wobble 0.5s infinite alternate ease;
+}
+
+
+@keyframes wobble {
+  0% {
+      transform: translateY(-5px);
+    
+  }
+  100% {
+  
+      transform: translateY(5px);
+  }
+}
+
+
+.fa-tiktok {
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 10px 10px;
+  background-color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.fa-tiktok:hover {
+  background-color: black;
+  color: white;
+}
+
+.fa-facebook {
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: hsl(240, 82%, 53%);
+  color: white;
+  animation-delay: 1s;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.fa-facebook:hover {
+  background-color: white;
+  color: hsl(240, 82%, 53%);
+}
+
+.fa-linkedin {
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  color: rgb(13, 13, 87);
+}
+
+.fa-linkedin:hover {
+  background-color: rgb(13, 13, 87);
+  color: white;
+}
