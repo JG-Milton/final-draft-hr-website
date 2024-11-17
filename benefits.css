@@ -25,7 +25,7 @@ body {
 /* NAVIGATION BAR, REUSE FOR ALL NECESSARY PAGES */
 
 nav{
-  background-color: darkred;
+  background-color: red;
   box-shadow: 3px 3px 5px slategray;
 }
 
@@ -51,12 +51,14 @@ nav a{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav a:hover{
+.topnav li:not(:first-child):hover {
   background-color: salmon;
 }
 
+
 nav li:first-child {
   margin-right: auto;
+  transform: scale(0.9);
 }
 
 .logo {
@@ -100,7 +102,9 @@ nav li:first-child {
       display: block !important;
   }
   
-
+  .title p {
+    font-size: 3em !important;
+  }
 
 }
 
@@ -109,8 +113,8 @@ nav li:first-child {
       width: 100%;
   }
 
-  .title h1{
-    font-size: 1.2em;
+  .title p{
+    font-size: 3em !important;
   }
  
 }
@@ -127,16 +131,18 @@ nav li:first-child {
   justify-content: center;
   text-align: center;
   align-content: center;
-  /* border: solid 2px; */
-  font-family: 'Signika';
-  height: 15vh;
   flex-direction: column;
-  color: #da7878;
-  text-shadow: 2px 2px 5px black;
-  letter-spacing: 4px;
-  font-size: 2em;
   padding-top: 40px;
   margin-top: 20px;
+}
+
+.title p {
+  font-family: 'Monoton';
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-size: 4em;
+  color: green;
+  padding: 20px;
 }
 
 .container1,

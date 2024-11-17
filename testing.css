@@ -1,0 +1,96 @@
+/* Container to hold the entire slideshow */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section-1 {
+    border: solid;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.slideshow-container {
+    border: solid 2px;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.mySlides {
+    height: 100vh;
+    width: 50vw;
+    background-position: center;
+    background-size: cover;
+    border: solid;
+    display: none;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+}
+
+
+.slide1 {
+    background-image: url(image/landing-page-3.png);
+}
+.slide2 {
+    background-image: url(image/1689091250663.jpg);
+}
+.slide3 {
+    background-image: url(image/HR4.jpg);
+}
+
+
+/* ---Active Slides--- */
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ---Prev & Next Buttons--- */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    border: solid;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: red;
+    color: white;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:active {
+    transform: translateY(10px);
+} 
+
+.next {
+    right: 0;
+}
+
+.next:active {
+    transform: translateY(10px);
+} 
+
+.video {
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+    /* padding-bottom: 56.25%;  */
+    width: 100%;
+}
+
+.video iframe {
+    width: 100vw;
+    height: 315px;
+    /* width: 100%;
+    height: 100%; */
+}

@@ -23,8 +23,9 @@
   
   
   nav {
-    background-color: darkred;
+    background-color: red;
     box-shadow: 3px 3px 5px slategray;
+    overflow-y: hidden;
   }
   
   nav ul{
@@ -49,12 +50,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  nav a:hover{
+  .topnav li:not(:first-child):hover {
     background-color: salmon;
-  }
+  }  
   
   nav li:first-child {
     margin-right: auto;
+    /* border: solid 1px; */
+    transform: scale(0.9);
   }
   
   .logo {
@@ -123,36 +126,20 @@
 
 
   .section1 {
-    /* border: solid 2px; */
-    font-size: 2em;
-    text-align: center;
     padding: 40px 0 40px 0;
-    font-family: "Signika";
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px black;
-    letter-spacing: 4px;
-    color: #da7878;
   }
+
 
   .section1 p{
-    /* border: solid 2px; */
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
-    padding: 40px 0 40px 0;
-    font-family: "Signika";
+    font-family: "Monoton";
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px white;
     letter-spacing: 4px;
-    color: #da7878;
+    color:green;
   }
 
-  /* .section1 p {
-    text-shadow: 
-    1px 1px 0 black, 
-   -1px 1px 0 black, 
-    1px -1px 0 black, 
-   -1px -1px 0 black;
-  } */
 
   /* --------------------------------SECTION 2---------------------- */
 
@@ -264,8 +251,8 @@ footer p {
   scale: 0.8;
 }
 
-.social-icons:active {
-  transform: translateY(5px);
+.social-icons:hover {
+  transform: scale(1.1);
 }
 
 footer .social-icons a {
@@ -278,5 +265,11 @@ footer .social-icons a {
   .social-main {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media(max-width: 580px) {
+  .section1 p{
+    font-size: 2.2em;
   }
 }
